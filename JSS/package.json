@@ -1,0 +1,9 @@
+{
+  "name": "multiheaddemo",
+  "private": true,
+  "workspaces": [
+    "site1",
+    "site2",
+    "shared"
+  ]
+}
