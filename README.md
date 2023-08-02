@@ -10,12 +10,15 @@ See also:
 - https://docs.npmjs.com/cli/v7/using-npm/workspaces#getting-started-with-workspaces
 - https://doc.sitecore.com/xp/en/developers/hd/20/sitecore-headless-development/install-headless-services-using-the-package--zip-file.html
 - https://doc.sitecore.com/xp/en/developers/hd/20/sitecore-headless-development/create-a-sitecore-api-key.html
+- https://doc.sitecore.com/xp/en/developers/hd/20/sitecore-headless-development/sitecore-javascript-rendering-sdk--jss--for-next-js.html
 - 
-
 
 ## Quick Steps to set up your NPM Workspaces Solution
 - Stand up your Sitecore installation (use SIA or your preferred approach/toplogy). You'll need to install Sitecore Headless Services, SPE and SXA for the example: 
-- Create your API Key as per instructions here: https://doc.sitecore.com/xp/en/developers/hd/20/sitecore-headless-development/create-a-sitecore-api-key.html 
+- Create your API Key as per instructions here: https://doc.sitecore.com/xp/en/developers/hd/20/sitecore-headless-development/create-a-sitecore-api-key.html
+- Create new Sitecore Headless Tenant(s) as needed
+- Create each Headless SXA Site under the tenant(s) as needed
+- Set up your Bindings for each (this example only runs one head at a time) and apply in the SXA Site settings
 - ensure you have NodeJS installed: https://nodejs.org/en/download 
 - ensure you have npm installed:  https://docs.npmjs.com/downloading-and-installing-node-js-and-npm `npm install -g npm` 
 - install Sitecore Headless CLI: https://www.npmjs.com/package/@sitecore-jss/sitecore-jss-cli `npm i @sitecore-jss/sitecore-jss-cli`
@@ -44,5 +47,8 @@ Project folder structure:
 
 - To run up a new head, run this command in the root directory for each head: `npm init sitecore-jss@20.0.3 nextjs` (this is for version 20.0.3 nextjs - use your own values)
 - follow the prompts and supply your own values for API Key and Sitecore Site Urls
-- 
+- move into the root directory for each head (including shared) and do the same thing. This is the process to follow to add addiitonal sites.
+
+
+<img width="1105" alt="image" src="https://github.com/DaveGoosem/Sitecore-Multi-Head-Demo/assets/1243924/a6fa8662-e4f5-4e15-839d-fd9195cb6e72">
 
