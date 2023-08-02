@@ -88,6 +88,9 @@ Once you've run npm i you will see that in the generated packages-lock.json file
 
 <img width="1872" alt="image" src="https://github.com/DaveGoosem/Sitecore-Multi-Head-Demo/assets/1243924/ba2498c1-01cf-4814-afbf-35d55282ab1a">
 
+- in order to be able to access files in each site using pathing nicely and neatly, lets set up some path aliases in each site's `tsconfig.json` file. Keep in mind that shared should have access to all sites including itself but each head should only know about itself and 'shared'.
+
+<img width="1105" alt="image" src="https://github.com/DaveGoosem/Sitecore-Multi-Head-Demo/assets/1243924/3ed15414-1791-4e4e-bf30-da7ae3e83f41">
 
 
 
