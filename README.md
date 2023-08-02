@@ -73,6 +73,22 @@ const withTM = require('next-transpile-modules')(['shared']); // pass the module
 module.exports = withPlugins([withTM], appPlugins);
 ```
 
+Since we now have a NPM Workspace defined and we've configured each project with the new dependency in the packages.json files we can now run NPM Install in the /JSS (root directory). What this is going to do is install all the node packages into the main node_packages folder and keep track of which project needs which dependencies. Pretty neat.
+
+Once you've run npm i you will see that in the generated packages-lock.json file that you have an entry for each of your Sites similar to this:
+
+<img width="1066" alt="image" src="https://github.com/DaveGoosem/Sitecore-Multi-Head-Demo/assets/1243924/f03bb30a-de28-477f-a349-8bf5919fa9d9">
+
+
+
+- Update the `/scripts/generate-component-factory.ts` file within each site that needs access to the shared components:
+(use your own paths/values for paths depending on what you've named things)
+
+**See the file in the git repo for reference**
+
+<img width="1872" alt="image" src="https://github.com/DaveGoosem/Sitecore-Multi-Head-Demo/assets/1243924/ba2498c1-01cf-4814-afbf-35d55282ab1a">
+
+
 
 
 
