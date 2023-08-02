@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/site1/*": ["../site1/*"],
+      "@/componentLibrary/*": ["src/component-library/*"],
+      "@/components/*": ["src/components/*"],
+      "@/site2/*": ["../site2/*"],
+      "@/media/*": ["src/media/*"],
+      "@/shared/*": ["./*"],
+      "@/temp/*": ["src/temp/*"],
+      "@/site3/*": ["../site3/*"],
+      "lib/*": ["src/lib/*"],
+      "temp/*": ["src/temp/*"]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "forceConsistentCasingInFileNames": true,
+    "downlevelIteration": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

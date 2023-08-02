@@ -4,6 +4,6 @@
   "workspaces": [
     "site1",
     "site2",
-    "shared"
+    "sharedsite"
   ]
 }
