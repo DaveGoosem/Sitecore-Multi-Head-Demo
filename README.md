@@ -52,3 +52,27 @@ Project folder structure:
 
 <img width="1105" alt="image" src="https://github.com/DaveGoosem/Sitecore-Multi-Head-Demo/assets/1243924/a6fa8662-e4f5-4e15-839d-fd9195cb6e72">
 
+### Configuring sharing of Sitecore comps between Shared and each site with the transpiler module and OOTB Sitecore Script updates
+- change into the folder for the site you want to configure, and run `npm i next-transpile-modules@9.0.0` and `npm i next-compose-plugins@2.2.1`
+- open the `next.config.js` file and 
+- copy the following at the bottom of the file such that you replace this original section:
+
+```
+module.exports = () => {
+  // Run the base config through any configured plugins
+  return Object.values(plugins).reduce((acc, plugin) => plugin(acc), nextConfig);
+}
+```
+
+with this updated section:
+```
+//Adding transpile module and nextjs plugin configs together using next-compose-plugins module
+const withPlugins = require('next-compose-plugins');
+const appPlugins = Object.values(plugins).reduce((acc, plugin) => plugin(acc), nextConfig);
+const withTM = require('next-transpile-modules')(['shared']); // pass the modules you would like to see transpiled
+module.exports = withPlugins([withTM], appPlugins);
+```
+
+
+
+
